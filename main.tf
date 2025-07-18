@@ -1,8 +1,12 @@
+# look at the resource documentation for import id specifics
 import {
   id = "projects/gke-autopilot-alpha/zones/us-central1-c/instances/manually-created-vm"
   to = google_compute_instance.default
 }
 
+# captured from file after this command
+# terraform plan -generate-config-out manual-vm.tf
+# then `terraform apply` will import into state
 resource "google_compute_instance" "default" {
   allow_stopping_for_update  = null
   can_ip_forward             = false
