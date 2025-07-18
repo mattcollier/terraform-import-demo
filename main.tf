@@ -1,10 +1,4 @@
-locals {
-  project = "gke-autopilot-alpha"
-  zone    = "us-central1"
-  name    = "manually-created-vm"
-}
-
 import {
-  id = "projects/${local.project}/zones/${local.zone}/instances/${local.name}"
+  id = "projects/gke-autopilot-alpha/zones/us-central1/instances/manually-created-vm"
   to = google_compute_instance.default
 }
